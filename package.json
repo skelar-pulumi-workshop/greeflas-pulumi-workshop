@@ -1,6 +1,5 @@
 {
     "name": "base",
-    "main": "index.ts",
     "devDependencies": {
         "@types/mocha": "^10.0.6",
         "@types/node": "^18",

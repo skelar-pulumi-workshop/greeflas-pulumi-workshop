@@ -21,6 +21,7 @@ export class ApplicationDB extends pulumi.ComponentResource {
             settings: {
                 tier: "db-f1-micro",
             },
+            deletionProtection: false,
         }, { aliases: ["urn:pulumi:dev::base::gcp:sql/databaseInstance:DatabaseInstance::main"], ...parentOpts });
 
         const database = new gcp.sql.Database("app", {

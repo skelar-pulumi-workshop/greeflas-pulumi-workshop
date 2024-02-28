@@ -1,5 +1,5 @@
 import { ApplicationDB } from "./db";
-import { myCluster } from "./k8s";
+import { myCluster, kubeconfig } from "./k8s";
 import { myInstance } from "./vm";
 import * as pulumi from "@pulumi/pulumi";
 
@@ -22,5 +22,5 @@ const appDB = new ApplicationDB("my-db", {
 }, {})
 
 export const dbPublicIP = appDB.dbInstance.publicIpAddress;
-export const clusterName = myCluster.name;
+export const k8sConfig = kubeconfig;
 export const instanceName = myInstance.name;
