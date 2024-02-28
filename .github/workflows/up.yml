@@ -1,0 +1,27 @@
+name: up-pulumi
+on:
+  push:
+    branches: ["main", "stage5"]
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/test.yml
+  up-base-dev:
+    needs: unit-tests
+    uses: ./.github/workflows/pulumi-cmd.yml
+    with:
+      command: up
+      stack-name: dev
+      work-dir: ./base
+    secrets:
+      PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+      GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+  up-app-dev:
+    needs: up-base-dev
+    uses: ./.github/workflows/pulumi-cmd.yml
+    with:
+      command: up
+      stack-name: dev
+      work-dir: ./app
+    secrets:
+      PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+      GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
