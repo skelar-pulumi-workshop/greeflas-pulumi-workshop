@@ -1,3 +1,5 @@
 encryptionsalt: v1:Ip2+tFY4KxE=:v1:xhTTz5vRKPntA3+c:2SsQvjmetE0TIWhFJGubZvN1JY+xoQ==
 config:
+  base:k8sVersion: 1.29.1-gke.1575000
   gcp:project: valiant-student-415714
+  gcp:region: us-east1
