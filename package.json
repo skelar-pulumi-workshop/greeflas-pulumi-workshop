@@ -2,11 +2,17 @@
     "name": "base",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "^18"
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^18",
+        "mocha": "^10.3.0",
+        "ts-node": "^10.9.2"
     },
     "dependencies": {
         "@pulumi/gcp": "^7.0.0",
         "@pulumi/postgresql": "^3.10.1",
         "@pulumi/pulumi": "^3.0.0"
+    },
+    "scripts": {
+        "test": "mocha -r ts-node/register **/*_test.ts"
     }
 }

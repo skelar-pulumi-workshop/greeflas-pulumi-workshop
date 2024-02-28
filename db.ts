@@ -16,7 +16,7 @@ export class ApplicationDB extends pulumi.ComponentResource {
         const parentOpts = { parent: this, ...opts };
 
         this.dbInstance = new gcp.sql.DatabaseInstance("main", {
-            databaseVersion: "POSTGRES_15",
+            databaseVersion: args.databaseVersion,
             region: "us-central1",
             settings: {
                 tier: "db-f1-micro",
