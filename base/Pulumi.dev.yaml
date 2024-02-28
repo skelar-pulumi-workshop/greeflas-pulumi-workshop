@@ -1,0 +1,11 @@
+encryptionsalt: v1:cCrjN5P8iss=:v1:IQVwcVLvEz2c7h9q:ZMvpJEr7VZER52OdUC4PQN1Rm4S8vQ==
+config:
+  base:dbConfig:
+    databaseVersion: POSTGRES_15
+    postgresPassword:
+      secure: v1:sBXKClp99e46iZXe:pV3Hko/kVNOVMm5znJN3w7CQsF7mxA==
+    schemas:
+      - test1
+      - test2
+  base:k8sVersion: 1.29.1-gke.1575000
+  gcp:project: tactical-orbit-366415
