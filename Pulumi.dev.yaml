@@ -1,0 +1,4 @@
+encryptionsalt: v1:cCrjN5P8iss=:v1:IQVwcVLvEz2c7h9q:ZMvpJEr7VZER52OdUC4PQN1Rm4S8vQ==
+config:
+  gcp:project: tactical-orbit-366415
+  base:k8sVersion: 1.29.1-gke.1575000
